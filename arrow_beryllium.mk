@@ -6,20 +6,15 @@
 
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
-# Inherit some common ArrowOS stuff.
+# Inherit some common p404 stuff.
 $(call inherit-product, vendor/404/configs/common.mk)
-# ArrowOS Stuff
-ARROW_GAPPS := true
-ARROW_COMMUNITY := true
 
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # GApps
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_INCLUDE_GOOGLE_RECORDER := true
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_GAPPS_ARCH := arm64
+$(call inherit-product, vendor/google/pixel/config.mk)
+$(call inherit-product, vendor/google/gms/config.mk)
 
 # Device identifier. This must come after all inclusions.
 DEVICE_MAINTAINER := XtremeOrnob
