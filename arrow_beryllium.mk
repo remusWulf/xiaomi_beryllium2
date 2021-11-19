@@ -7,7 +7,7 @@
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
 # Inherit some common ArrowOS stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/404/config/common.mk)
 # ArrowOS Stuff
 ARROW_GAPPS := true
 ARROW_COMMUNITY := true
